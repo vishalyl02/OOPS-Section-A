@@ -1,0 +1,70 @@
+
+
+
+
+Coding Questions:
+
+Que-1
+
+Sum of First N Natural Numbers (While Loop)
+
+Example Input:
+
+4
+Example Output:
+
+
+Sum: 10
+
+
+Que-2
+
+Problem:
+Write a program that checks if a number is positive, negative, or zero.
+
+Example Input:
+
+-5
+Example Output:
+
+Negative
+
+
+
+Que-3
+
+Problem:
+Write a program that prints the multiplication table of a given number N up to 10.
+
+Example Input:
+
+3
+
+Example Output:
+
+3 x 1 = 3
+3 x 2 = 6
+3 x 3 = 9
+3 x 4 = 12
+3 x 5 = 15
+3 x 6 = 18
+3 x 7 = 21
+3 x 8 = 24
+3 x 9 = 27
+3 x 10 = 30
+
+
+Que-04
+
+
+Problem:
+Write a program to calculate the factorial of a given number N.
+
+Example Input:
+
+5
+
+Example Output:
+
+Factorial: 120
+

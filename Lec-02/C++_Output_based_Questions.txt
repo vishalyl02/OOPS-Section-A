@@ -1,0 +1,151 @@
+
+
+
+
+
+Q1
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    cout << 21 + 40;
+    return 0;
+}
+
+
+
+Q2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, C++!";
+    return 0;
+}
+
+
+Q3
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 10, b = 3;
+    cout << "Result: " << a / b;
+    return 0;
+}
+
+Q4
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float x = 5.5;
+    int y = (int)x;
+    cout << "Y: " << y;
+    return 0;
+}
+
+Q5
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    cout << a << " " << a++ << " " << ++a;
+    return 0;
+}
+
+
+Q6
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num = 8;
+    if (num % 2 == 0)
+        cout << "Even";
+    else
+        cout << "Odd";
+    return 0;
+}
+
+
+Q7
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    float b = 2.5;
+    cout << a + b;
+    return 0;
+}
+
+
+
+Q8
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 7;
+    if (x = 0)
+        cout << "Zero";
+    else
+        cout << "Not Zero";
+    return 0;
+}
+
+Q9
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char ch = 'A';
+    cout << (int)ch;
+    return 0;
+}
+
+
+Q10
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    if (x > 5)
+        if (x < 15)
+            cout << "Inside";
+        else
+            cout << "Outside";
+    return 0;
+}
+
+
+Q11
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    cout << "You entered: " << num;
+    return 0;
+}
+

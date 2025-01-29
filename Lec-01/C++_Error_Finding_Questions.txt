@@ -1,0 +1,121 @@
+Error Finding Questions
+
+
+
+
+
+
+Que-1
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10
+    cout << "Value of x: " << x << endl;
+    return 0;
+}
+
+
+Que-2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hello, World!";
+    return 0;
+
+
+Que-3
+
+#include <iostream>
+using namespace std;
+
+void main() {
+    cout << "C++ Programming";
+}
+
+
+Que-4
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cout << "You entered: " << num;
+    return 0;
+}
+
+
+Que-5
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    if a > 3
+        cout << "A is greater than 3";
+    else 
+        cout << "A is not greater than 3";
+    return 0;
+}
+
+
+Que-5
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    float num = 10.5;
+    int val = num;
+    cout << "Value: " << val;
+    return 0;
+}
+
+
+
+Que-6
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 4;
+    if (x > 2)
+        if (x > 5)
+            cout << "X is greater than 5";
+        else
+            cout << "X is small";
+    return 0;
+}
+
+
+Que-7
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    if (x = 5) {
+        cout << "X is 5";
+    } else {
+        cout << "X is not 5";
+    }
+    return 0;
+}
+
+
+Que-8
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Welcome to C++" endl;
+    return 0;
+}
