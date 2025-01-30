@@ -10,7 +10,7 @@ int main()
 
     for (int i = 1; i <= 10; i++)
     {
-        cout << n << " * " << i << " = " << n * i << endl;
+        cout << n << " * " << i << " = " << n * i << endl;         // Printing the multiplied value for each term
     }
 
     return 0;
