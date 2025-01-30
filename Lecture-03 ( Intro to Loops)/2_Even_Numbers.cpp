@@ -10,7 +10,7 @@ int i=1;          // Initialisation
 
 while(i<=100)        // Condition
 {
-if(i%2==0)      
+if(i%2==0)        // Condition to check for even number
 cout<<i<<" ";
 i=i+1;              // updation
 }
