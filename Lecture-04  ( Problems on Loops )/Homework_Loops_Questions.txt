@@ -1,0 +1,51 @@
+
+
+
+
+
+
+
+
+Coding Questions:
+
+
+
+Que-1:
+
+
+Reverse Counting from N to 1
+Write a program that takes an integer N and prints numbers from N down to 1 using a do-while loop.
+
+Que-2
+
+Write a program that takes an integer N as input and prints all its factors. 
+A factor of N is any number that divides N without leaving a remainder.
+
+Que-3
+
+Write a program to print the following pattern for N = 5:
+
+
+*  
+**  
+***  
+****  
+*****
+
+Que-4:
+
+
+Find the Sum of All Digits in a Number
+Write a program that takes an integer N and calculates the sum of its digits.
+Example:
+Input: N = 543 → Output: 5 + 4 + 3 = 12
+
+Que-5:
+
+Check Prime Number
+Write a program that takes an integer N as input and checks whether it is a prime number using a loop.
+
+
+
+
+
