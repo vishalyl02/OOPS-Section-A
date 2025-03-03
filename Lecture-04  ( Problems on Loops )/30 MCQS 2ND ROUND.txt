@@ -1,0 +1,754 @@
+
+
+
+
+
+Que-1
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    cout << *(arr + 3);
+    return 0;
+}
+
+
+
+A) 10
+B) 20
+C) 40
+D) Compilation Error
+
+
+Answer: C) 40
+
+Que-2
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a = 5;
+    cout << a++ << " " << ++a;
+    return 0;
+}
+
+
+A) 5 7
+B) 6 6
+C) 5 6
+D) Undefined Behavior
+
+
+
+Answer: D) Undefined Behavior
+
+Que-3
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    char *ptr = "Hello";
+    cout << *ptr + 1;
+    return 0;
+}
+
+
+A) H
+B) I
+C) e
+D) Compilation Error
+
+Que-4
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 5;
+    switch (x) {
+        case 4:
+            cout << "Four ";
+            break;
+        case 5:
+            cout << "Five ";
+        case 6:
+            cout << "Six ";
+            break;
+        default:
+            cout << "Default ";
+    }
+    return 0;
+}
+
+
+A) Five Six
+B) Five Six Default
+C) Five
+D) Six
+
+
+Answer: A) Five Six
+
+Que-5
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    for (int i = 0; i < 5; i++) {
+        for (int j = i; j < 5; j++) {
+            if (j == 3) break;
+            cout << j << " ";
+        }
+    }
+    return 0;
+}
+
+
+A) 0 1 2 1 2 2
+B) 0 1 2 0 1 2 1 2 2
+C) 0 1 2 0 1 2 1 2
+D) 0 1 2 1 2
+
+
+Answer: A) 0 1 2 1 2 2
+
+
+Que-6
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 0;
+    do {
+        cout << x << " ";
+        if (x == 2) break;
+        x++;
+    } while (x < 5);
+    return 0;
+}
+
+
+
+A) 0 1 2
+B) 0 1 2 3
+C) 0 1 2 3 4
+D) 0 1 2 3 4 5
+
+Answer: A) 0 1 2
+
+Que-7
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 0;
+    while (i < 3) {
+        int i = 10;
+        cout << i << " ";
+        i++;
+    }
+    return 0;
+}
+
+
+A) 10 10 10
+B) 0 1 2
+C) 10 11 12
+D) Infinite loop
+
+Answer: D) Infinite loop
+
+Que-8
+
+#include <iostream>
+using namespace std;
+
+void modifyArray(int arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        arr[i] = arr[i] * 2;
+    }
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    modifyArray(arr, size);
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
+
+
+A) 1 2 3 4 5
+B) 2 4 6 8 10
+C) Compilation error
+D) Undefined behavior
+
+Answer: B) 2 4 6 8 10
+
+
+Que-09
+
+#include <iostream>
+using namespace std;
+
+void recursiveFunction(int n) {
+    if (n <= 0)
+        return;
+    cout << n << " ";
+    recursiveFunction(n - 2);
+    cout << n << " ";
+}
+
+int main() {
+    recursiveFunction(5);
+    return 0;
+}
+
+
+A) 5 3 1 1 3 5
+B) 5 3 1
+C) 5 3 1 3 5
+D) 5 4 3 2 1
+
+Answer: A) 5 3 1 1 3 5
+
+Que-10
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    int (*p)[3] = arr;
+    cout << *(*(p + 1) + 2) << endl;
+    return 0;
+}
+
+
+A) 3
+B) 4
+C) 5
+D) 6
+
+Answer: D) 6
+
+Que-11
+
+#include <iostream>
+using namespace std;
+
+bool hasPairWithSum(int arr[], int size, int sum) {
+    int left = 0;
+    int right = size - 1;
+    while (left < right) {
+        int currentSum = arr[left] + arr[right];
+        if (currentSum == sum)
+            return true;
+        else if (currentSum < sum)
+            left++;
+        else
+            right--;
+    }
+    return false;
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 9};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int sum = 8;
+    if (hasPairWithSum(arr, size, sum))
+        cout << "Pair found" << endl;
+    else
+        cout << "Pair not found" << endl;
+    return 0;
+}
+
+
+A) Pair found
+B) Pair not found
+C) Compilation error
+D) Runtime error
+
+Answer: B) Pair not found
+
+
+
+
+Que-12
+
+#include <iostream>
+using namespace std;
+
+void func(int arr[], int size) {
+    static int sum = 0;
+    if (size == 0) {
+        cout << sum << endl;
+        return;
+    }
+    sum += arr[size - 1];
+    func(arr, size - 1);
+}
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    func(arr, 5);
+    func(arr, 5);
+    return 0;
+}
+
+
+
+A) 15 15
+B) 15 30
+C) 15 0
+D) Compilation error
+
+Answer: B) 15 30
+
+Que-13
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[3][3] = { {1, 2}, {3, 4, 5}, {6} };
+    int (*p)[3] = arr;
+    cout << *(*(p + 1) + 1) << " " << *(*(p + 2)) << endl;
+    return 0;
+}
+
+
+
+A) 4 6
+B) 4 0
+C) 5 6
+D) 5 0
+
+Answer: A) 4 6
+
+Que-14
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int *ptr1 = arr;
+    int *ptr2 = arr + 4;
+    cout << *ptr2 - *ptr1 << endl;
+    return 0;
+}
+
+
+A) 40
+B) 4
+C) -40
+D) -4
+
+Answer: A) 40
+
+Que-15
+
+#include <iostream>
+using namespace std;
+
+void func(int &x, int y = 5) {
+    x += y;
+}
+
+int main() {
+    int a = 10, b = 3;
+    func(a);
+    cout << a << " ";
+    func(a, b);
+    cout << a << endl;
+    return 0;
+}
+
+
+
+A) 15 18
+B) 15 15
+C) 10 13
+D) 10 10
+
+Answer: A) 15 18
+
+
+Que-16
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr = arr + 2;
+    cout << *(ptr + 1) - *(ptr - 1);
+    return 0;
+}
+
+
+A) 10
+B) 20
+C) 30
+D) 40
+
+Answer: B) 20
+
+Que-17
+
+#include <iostream>
+using namespace std;
+
+void func() {
+    static int x = 3;
+    cout << x << " ";
+    x--;
+    if (x > 0) func();
+}
+
+int main() {
+    func();
+    return 0;
+}
+
+A) 3 2 1 0
+B) 3 2 1
+C) 3 2
+D) 3
+
+Answer: B) 3 2 1
+
+
+Que-18
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 5;  // 0101 in binary
+    int y = 3;  // 0011 in binary
+    cout << (x ^ y);
+    return 0;
+}
+
+A) 1
+B) 2
+C) 6
+D) 8
+
+Answer: C) 6
+
+Que-19
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[2][3] = {{10, 20, 30}, {40, 50, 60}};
+    cout << *(*(arr + 1) + 2);
+    return 0;
+}
+
+
+A) 10
+B) 30
+C) 40
+D) 60
+
+Answer: D) 60
+
+Que-20
+
+
+#include <iostream>
+using namespace std;
+
+int maxSubArray(int arr[], int n) {
+    int maxSum = arr[0], currSum = arr[0];
+    for (int i = 1; i < n; i++) {
+        currSum = max(arr[i], currSum + arr[i]);
+        maxSum = max(maxSum, currSum);
+    }
+    return maxSum;
+}
+
+int main() {
+    int arr[] = {-2, 1, -3, 4, -1, 2, 1, -5, 4};
+    cout << maxSubArray(arr, 9);
+    return 0;
+}
+
+
+A) 5
+B) 6
+C) 7
+D) 4
+
+Answer: B) 6
+
+Que-21
+
+#include <iostream>
+using namespace std;
+
+void modify(int arr[]) {
+    arr[0] = 100;
+}
+
+int main() {
+    int arr[3] = {1, 2, 3};
+    modify(arr);
+    cout << arr[0];
+    return 0;
+}
+
+
+A) 1
+B) 100
+C) 0
+D) Compilation Error
+
+Answer: B) 100
+
+
+
+Que-22
+
+#include <iostream>
+using namespace std;
+
+void test() {
+    auto int x = 10;
+    cout << x << " ";
+    x++;
+}
+
+int main() {
+    test();
+    test();
+    return 0;
+}
+
+A) 10 10
+B) 10 11
+C) 11 12
+D) Compilation Error
+
+Answer: A) 10 10
+
+
+Que-23
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 3, 5, 7, 9, 11};
+    int left = 0, right = 5;
+
+    while (left < right) {
+        cout << arr[left] + arr[right] << " ";
+        left++;
+        right--;
+    }
+    return 0;
+}
+
+
+A) 12 10 8
+B) 12 11 8
+C) 12 10 9
+D) 12 11
+
+Answer: B) 12 11 8
+
+Que-24
+
+#include <iostream>
+using namespace std;
+
+void fun(int n) {
+    if (n <= 0) return;
+    cout << n << " ";
+    fun(n - 2);
+    cout << n << " ";
+}
+
+int main() {
+    fun(5);
+    return 0;
+}
+
+
+A) 5 3 1 1 3 5
+B) 5 3 1 3 5
+C) 5 3 1 0 1 3 5
+D) 5 3 1 0 -1 1 3 5
+
+Answer: A) 5 3 1 1 3 5
+
+Que-25
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    int *p = &x;
+    *p += 5;
+    cout << x;
+    return 0;
+}
+
+
+A) 10
+B) 15
+C) Address of x
+D) Compilation Error
+
+Answer: B) 15
+
+
+Que-26
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {1, 2, 3, 4, 5};
+    int *p = arr;
+    cout << *(p + 2);
+    return 0;
+}
+
+
+A) 1
+B) 2
+C) 3
+D) 4
+
+Answer: C) 3
+
+Que-27
+
+
+#include <iostream>
+using namespace std;
+
+int findMajority(int arr[], int n) {
+    int count = 0, candidate = -1;
+    for (int i = 0; i < n; i++) {
+        if (count == 0) candidate = arr[i];
+        count += (arr[i] == candidate) ? 1 : -1;
+    }
+    return candidate;
+}
+
+int main() {
+    int arr[] = {3, 3, 4, 2, 4, 4, 2, 4, 4};
+    cout << findMajority(arr, 9);
+    return 0;
+}
+
+
+A) 4
+B) 3
+C) 2
+D) Undefined
+
+Answer: A) 4
+
+
+Que-28
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 10;
+    int *p = &x;
+    int **pp = &p;
+    cout << **pp;
+    return 0;
+}
+
+
+A) 10
+B) Address of x
+C) Address of p
+D) Compilation Error
+
+Answer: A) 10
+
+Que-29
+
+
+#include <iostream>
+using namespace std;
+
+int slidingWindowSum(int arr[], int n, int k) {
+    int maxSum = 0, windowSum = 0;
+    for (int i = 0; i < k; i++) windowSum += arr[i];
+    maxSum = windowSum;
+
+    for (int i = k; i < n; i++) {
+        windowSum += arr[i] - arr[i - k];
+        maxSum = max(maxSum, windowSum);
+    }
+    return maxSum;
+}
+
+int main() {
+    int arr[] = {2, 1, 5, 1, 3, 2};
+    cout << slidingWindowSum(arr, 6, 3);
+    return 0;
+}
+
+
+A) 7
+B) 9
+C) 8
+D) 10
+
+Answer: B) 9
+
+Que-30
+
+
+#include <iostream>
+using namespace std;
+
+void modify(char *str) {
+    str[0] = 'H';
+}
+
+int main() {
+    char str[] = "hello";
+    modify(str);
+    cout << str;
+    return 0;
+}
+
+
+A) Hello
+B) hello
+C) Segmentation Fault
+D) Compilation Error
+
+Answer: A) Hello
+
